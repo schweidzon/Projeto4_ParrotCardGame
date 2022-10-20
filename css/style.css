@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #EEF9BF;
+    
+    
+}
+
+.gameTitle {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.gameTitle h1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 66px;
+    letter-spacing: -0.004em;
+    color: #75B79E;
+    
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    
+}
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: normal;    
+    gap: 34px;   
+    width: 64em;
+    
+}
+
+.card {
+    width: 117px;
+    height: 146px; 
+    background-color:#A7E9AF ;
+    border: 1px solid #99CEA8;
+    border-radius: 5px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease; 
+    transform-style: preserve-3d;    
+    position: relative;
+}
+
+.card.turnCard {
+    transform: rotateY(180deg);
+}
+.back-face {
+    transform: rotateY(180deg)
+}
+
+.front-face,
+.back-face {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+
+
+.hidden {
+    opacity: 0;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+
+}
+
+.stopWatch {
+    width:100px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border-radius: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+}
+
+
+/* Começo mediaQuery */
+
+@media screen and (min-width:336px) and (max-width: 600px) {
+    .gameTitle h1 {        
+        font-size: 46px;
+    }
+
+   
+}
+
+@media (max-width: 335px) {
+    .gameTitle h1 {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px!important;
+        line-height: 42px;        
+        letter-spacing: -0.004em;
+    }
+
+    .container-cards {
+        width: 100%;
+        margin: 0 150px 0 150px;
+        justify-content: center;
+       
+    }
+}
+
+@media (max-width:800px) {
+    .stopWatch {
+        width:100px;
+        height: 40px;
+    }
+}
+
+
+
+@media (max-width: 1060px) { 
+    .container-cards {
+        justify-content: center;
+    }
+
+    .gameTitle h1 {
+        text-align: center;
+    }
+}
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
