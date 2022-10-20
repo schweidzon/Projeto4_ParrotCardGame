@@ -112,7 +112,7 @@ caso 2: se as cartas foram diferentes, espera 1 segundo e "desvira" as cartas
     
 
   
-    // Função alert para dizer que o jogo acabou e contar as jogadas feitas
+    // Função alert para dizer que o jogo acabou e contar as jogadas feitas e o tempo 
     
     if (acabou() === true && endGame === true) {
         setTimeout(() => {
