@@ -84,7 +84,7 @@ caso 2: se as cartas foram diferentes, espera 1 segundo e "desvira" as cartas
    
     card.classList.add('turnCard')
     cards = document.querySelectorAll('.card');
-    console.log(cards)
+    
 
     if (isFlipped === false) {
         card_1 = card;
@@ -99,7 +99,7 @@ caso 2: se as cartas foram diferentes, espera 1 segundo e "desvira" as cartas
         if (card_1.innerHTML === card_2.innerHTML) {
             card_1.onclick = null;
             card_2.onclick = null; 
-            console.log('achou');
+            
                     
         } else {
             setTimeout(()=> {
@@ -109,11 +109,10 @@ caso 2: se as cartas foram diferentes, espera 1 segundo e "desvira" as cartas
             }, 1000);
         }       
     } 
-    console.log(acabou());
-    console.log("endgame " + endGame)
+    
 
   
-    
+    // Função alert para dizer que o jogo acabou e contar as jogadas feitas
     
     if (acabou() === true && endGame === true) {
         setTimeout(() => {
@@ -126,10 +125,10 @@ caso 2: se as cartas foram diferentes, espera 1 segundo e "desvira" as cartas
         }, 500);
 
         
-
+        // Função para perguntar se o jogador gostaria de jogar novamente (Bônus)
       
         setTimeout(()=> {     
-            console.log('jogar aghain')   
+            
             
             do {
                 playAgain = prompt("Quer jogar de novo?")  
@@ -163,7 +162,6 @@ caso 2: se as cartas foram diferentes, espera 1 segundo e "desvira" as cartas
 
     }
  }
-
  
 
  // Função para verificar se o jogo acabou
