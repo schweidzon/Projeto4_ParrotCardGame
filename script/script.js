@@ -55,8 +55,6 @@ function selectCardsNumber() {
 
 
 
-
-
  function flipCard(card) {
    
     card.classList.add('turnCard')
@@ -86,9 +84,42 @@ function selectCardsNumber() {
             }, 1000);
         }       
     } 
+   
+
+  
     
     
+    if (acabou() === true && endGame === true) {
+        setTimeout(() => {
+            if (min < 1) {
+                console.log('acabou')
+                alert(`Você ganhou em ${countPlays} jogadas!`);            
+            } else if (min >= 1) {
+                alert(`Você ganhou em ${countPlays} jogadas!`); 
+            }
+        }, 500);
+
+        
+
+      
+      
+    }
  }
 
  
+
+ // Função para verificar se o jogo acabou
+
+ function acabou() {
+    for(let i = 0; i < cards.length; i++) {
+        if (!cards[i].classList.contains('turnCard'))        
+        return false;     
+        endGame = true;               
+    }
+       
+    return true;
+    
+}
+
+
 
